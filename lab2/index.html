@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2112495魏靖轩</title>
+</head>
+<body>
+	<p align="center">
+	<img src="NKU.png" alt="nku" width="310" height="120"/>
+	</p>
+	<p align="center">专业：计算机科学与技术</p>
+	<p align="center">姓名：魏靖轩</p>
+	<p align="center">学号：2112495</p>
+	<p align="center">
+    音频播放进度:
+    <audio id="myAudio" src="1.mp3" controls style="display: none;"></audio>
+    <progress id="audioProgress" max="1" value="0"></progress>
+    <script>
+        var audio = document.getElementById("myAudio");
+        var progress = document.getElementById("audioProgress");
+        audio.addEventListener("timeupdate", function() {
+            var currentTime = audio.currentTime;
+            var duration = audio.duration;
+            progress.value = currentTime / duration;
+        });
+        function playAudio() {
+            audio.play();
+        }
+    </script>
+    </p>
+    <p align="center">
+    <button onclick="playAudio()">自我介绍音频</button>
+    </p>
+    <p align="center">
+        <img src="mypic.png" alt="2112495" width="350" height="315"/>
+    </p>    
+</body>
+</html>
